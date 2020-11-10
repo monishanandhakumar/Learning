@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    var data = Model;
+}
+
+<h2>Index</h2>
+
+@foreach (var p in data)
+{
+    <li>@p.Products.ProductID</li>
+    <li>@p.SupplierID</li>
+    foreach(var pr in data.Product)
+        {
+            <li>@pr.ProductID</li>
+        }
+
+
+}
+
+@*<li>@data.SupplierID</li>*@
+
+@*@foreach(var p in data.Products)
+    {
+        <li>@p.ProductID</li>
+    }*@
+
